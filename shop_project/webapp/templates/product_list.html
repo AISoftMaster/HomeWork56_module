@@ -7,7 +7,7 @@ Products list
 <h1>Products</h1>
 {% for product in products %}
 
-    {% if product.surplus > 0 %}
+    {% if product.surplus >= 1 %}
            <ul>
       <li><a href="{% url 'product_detail' product.pk %}">  <p>{{ product.name }} : {{ product.price }}</p>
           <p>количество на складе:{{ product.surplus }}</p></a></li>
@@ -18,5 +18,5 @@ Products list
     {% if is_paginated %}
         {% include 'partial/pagination.html' %}
     {% endif %}
-    <h3><a href="{% url 'product_create' %}">New_product</a></></h3>
+    <h3><a href="{% url 'product_create' %}">New_product</a></h3>
 {% endblock content %}
