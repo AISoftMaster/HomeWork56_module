@@ -8,4 +8,6 @@ Product
     <li>{{ product.description }}</li>
     <li>{{ product.price }}</li>
     <li>{{ product.surplus }}</li>
+    <h2><a href="{% url 'product_update' product.pk %}">Внести изменения</a></h2>
+    <h2><a href="{% url 'product_delete' product.pk %}">Удалить подукт</a></h2>
 {% endblock content %}

@@ -9,9 +9,8 @@ Products list
     <ul>
       <a href="{% url 'product_detail' product.pk %}">  <li>{{ product.name }} : {{ product.price }}</li>
           <li>количество на складе:{{ product.surplus }}</li></a>
-
     </ul>
 
 {% endfor %}
-    <p><a href="{% url 'product_create' %}">New_product</a></p>
+    <h2><a href="{% url 'product_create' %}">New_product</a></></h2>
 {% endblock content %}
