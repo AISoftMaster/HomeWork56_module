@@ -6,11 +6,17 @@ Products list
 
 <h1>Products</h1>
 {% for product in products %}
-    <ul>
-      <a href="{% url 'product_detail' product.pk %}">  <li>{{ product.name }} : {{ product.price }}</li>
-          <li>количество на складе:{{ product.surplus }}</li></a>
+
+    {% if product.surplus > 0 %}
+           <ul>
+      <li><a href="{% url 'product_detail' product.pk %}">  <p>{{ product.name }} : {{ product.price }}</p>
+          <p>количество на складе:{{ product.surplus }}</p></a></li>
     </ul>
+    {% endif %}
 
 {% endfor %}
-    <h2><a href="{% url 'product_create' %}">New_product</a></></h2>
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+    {% endif %}
+    <h3><a href="{% url 'product_create' %}">New_product</a></></h3>
 {% endblock content %}

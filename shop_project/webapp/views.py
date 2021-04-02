@@ -11,7 +11,8 @@ class ProductListView(ListView):
     template_name = "product_list.html"
     context_object_name = "products"
     model = Product
-    paginate_by = 10
+    paginate_by = 5
+
 
 
 class ProductDetailView(DetailView):
@@ -47,3 +48,5 @@ class ProductUpdateView(UpdateView):
 
     def get_success_url(self):
         return reverse('product_detail', kwargs={'pk': self.object.pk})
+
+
