@@ -1,3 +1,7 @@
 db.sqlite3
 .idea/
 venv/
+shop_project/webapp/__pycache__/
+shop_project/webapp/__pycache__/urls.cpython-36.pyc
+shop_project/webapp/__pycache__/views.cpython-36.pyc
+
