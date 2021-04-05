@@ -21,3 +21,4 @@ class Basket(models.Model):
 
     def __str__(self):
         return '{}:{}'.format(self.product, self.amount)
+

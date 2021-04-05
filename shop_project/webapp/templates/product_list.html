@@ -11,6 +11,7 @@ Products list
            <ul>
       <li><a href="{% url 'product_detail' product.pk %}">  <p>{{ product.name }} : {{ product.price }}</p>
           <p>количество на складе:{{ product.surplus }}</p></a></li>
+           <li><a href="{% url 'basket_update' product.pk %}">Запихать в корзину</a></li>
     </ul>
     {% endif %}
 
