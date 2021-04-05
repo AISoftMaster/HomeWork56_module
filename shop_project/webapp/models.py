@@ -37,3 +37,6 @@ class Order(models.Model):
     phone_number = models.CharField(max_length=25, blank=False)
     address = models.CharField(max_length=100, blank=False)
     date = models.DateField(auto_now_add=True)
+
+    def __str__(self):
+        return self.username

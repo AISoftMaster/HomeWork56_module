@@ -11,11 +11,132 @@
   }
 },
 {
-  "model": "webapp.basket",
+  "model": "webapp.product",
+  "pk": 2,
+  "fields": {
+    "name": "cars",
+    "description": "asdf sadf sdf sdf",
+    "category": "KR",
+    "surplus": 128,
+    "price": "123423.0"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 3,
+  "fields": {
+    "name": "boats",
+    "description": "asdf sdf asdf asdf as dfa f",
+    "category": "US",
+    "surplus": 321,
+    "price": "123423.0"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 4,
+  "fields": {
+    "name": "book",
+    "description": "asdf asd fsda sad",
+    "category": "FR",
+    "surplus": 20800,
+    "price": "123.0"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 5,
+  "fields": {
+    "name": "shirt",
+    "description": "asdf asdfas df asdf",
+    "category": "KR",
+    "surplus": 123424,
+    "price": "234.0"
+  }
+},
+{
+  "model": "webapp.product",
+  "pk": 6,
+  "fields": {
+    "name": "mouse",
+    "description": "asdfsadf sda",
+    "category": "KR",
+    "surplus": 23098,
+    "price": "12.0"
+  }
+},
+{
+  "model": "webapp.orderproduct",
   "pk": 1,
   "fields": {
     "product": 1,
-    "amount": 2
+    "surplus": 2,
+    "order": 1
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 2,
+  "fields": {
+    "product": 2,
+    "surplus": 6,
+    "order": 2
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 3,
+  "fields": {
+    "product": 4,
+    "surplus": 434,
+    "order": 2
+  }
+},
+{
+  "model": "webapp.orderproduct",
+  "pk": 4,
+  "fields": {
+    "product": 6,
+    "surplus": 234,
+    "order": 2
+  }
+},
+{
+  "model": "webapp.order",
+  "pk": 1,
+  "fields": {
+    "username": "dgfr",
+    "phone_number": "sdfg",
+    "address": "sdfg",
+    "date": "2021-04-05"
+  }
+},
+{
+  "model": "webapp.order",
+  "pk": 2,
+  "fields": {
+    "username": "Konti",
+    "phone_number": "234",
+    "address": "asdf adffda asd fsadf",
+    "date": "2021-04-05"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$216000$xMKEV2qdvSDk$HykiM1xGr8u7+ep96FXpYwjuTIun9Yb9VCWHcFJtJ5o=",
+    "last_login": "2021-04-05T11:30:38.820Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@admin.admin",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-04-05T11:30:25.009Z",
+    "groups": [],
+    "user_permissions": []
   }
 }
 ]
