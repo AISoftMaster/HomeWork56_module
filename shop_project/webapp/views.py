@@ -70,15 +70,11 @@ class AddBasket(CreateView):
                 Basket.objects.create(product=product, amount=form.cleaned_data.get("amount"))
             product.surplus -= form.cleaned_data.get('amount')
             product.save()
-        # if product.surplus >= form.changed_data.get("surplus"):
-        # if Basket.objects.exists():
-        #     print('exist')
-        #     for i, y in Basket.objects.get():
-        #         print(i)
-        #     # print()
-        #     # print(Basket.objects.get(product))
-        #
-        # else:
-        #     print('not exist')
-
         return redirect('product_list')
+
+
+class BasketListView(ListView):
+    template_name = 'basket_list.html'
+    context_object_name = 'baskets'
+    model = Basket
+    paginate_by = 5

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+Basket List
+{% endblock title %}
+{% block content %}
+        <h1>Baskets</h1>
+    <ul>
+    {% for basket in baskets %}
+        <li>{{ basket.product.name }} : {{ basket.amount }}</li>
+    {% endfor %}
+    </ul>
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+    {% endif %}
+{% endblock content %}
