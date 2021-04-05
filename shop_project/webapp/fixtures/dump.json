@@ -3,171 +3,19 @@
   "model": "webapp.product",
   "pk": 1,
   "fields": {
-    "name": "Bread",
-    "description": "asdfa asdf asdf",
-    "category": "12",
-    "surplus": 78,
-    "price": "1535.0"
-  }
-},
-{
-  "model": "webapp.product",
-  "pk": 2,
-  "fields": {
-    "name": "sweater",
-    "description": "saf",
-    "category": "sdfgfgs",
-    "surplus": 33,
-    "price": "2344.4"
-  }
-},
-{
-  "model": "webapp.product",
-  "pk": 3,
-  "fields": {
-    "name": "Batter",
-    "description": "sfg",
-    "category": "US",
-    "surplus": 23,
-    "price": "234.0"
-  }
-},
-{
-  "model": "webapp.product",
-  "pk": 4,
-  "fields": {
-    "name": "Bumper",
-    "description": "sdfgsdfg fdsgsd fg sdf gsd fg",
+    "name": "fth",
+    "description": "treg",
     "category": "FR",
-    "surplus": 100,
-    "price": "232.0"
-  }
-},
-{
-  "model": "webapp.product",
-  "pk": 6,
-  "fields": {
-    "name": "Чехол",
-    "description": "sdfg",
-    "category": "FR",
-    "surplus": 1234,
-    "price": "34.0"
-  }
-},
-{
-  "model": "webapp.product",
-  "pk": 8,
-  "fields": {
-    "name": "Phone",
-    "description": "a;lsdkfj asldkf ja",
-    "category": "US",
-    "surplus": 123,
-    "price": "1244.0"
-  }
-},
-{
-  "model": "webapp.product",
-  "pk": 9,
-  "fields": {
-    "name": "Mouse",
-    "description": "asdf ds as s fa sdf",
-    "category": "KR",
-    "surplus": 123,
-    "price": "34.0"
-  }
-},
-{
-  "model": "webapp.product",
-  "pk": 10,
-  "fields": {
-    "name": "Zero surplus",
-    "description": "asdfsadf",
-    "category": "US",
-    "surplus": 0,
-    "price": "123.0"
-  }
-},
-{
-  "model": "webapp.product",
-  "pk": 11,
-  "fields": {
-    "name": "adgdfs",
-    "description": "sdfgsdfg fdsgsd fg sdf gsd fg",
-    "category": "KR",
-    "surplus": 234,
-    "price": "3342.0"
-  }
-},
-{
-  "model": "webapp.product",
-  "pk": 12,
-  "fields": {
-    "name": "asdf",
-    "description": "",
-    "category": "US",
-    "surplus": 2312,
-    "price": "41234.0"
-  }
-},
-{
-  "model": "webapp.product",
-  "pk": 13,
-  "fields": {
-    "name": "dsasadf",
-    "description": "wr",
-    "category": "FR",
-    "surplus": 1234,
-    "price": "21243.0"
+    "surplus": 21,
+    "price": "132.0"
   }
 },
 {
   "model": "webapp.basket",
   "pk": 1,
-  "fields": {
-    "product": 3,
-    "amount": 2
-  }
-},
-{
-  "model": "webapp.basket",
-  "pk": 2,
-  "fields": {
-    "product": 9,
-    "amount": 6
-  }
-},
-{
-  "model": "webapp.basket",
-  "pk": 3,
-  "fields": {
-    "product": 2,
-    "amount": 10
-  }
-},
-{
-  "model": "webapp.basket",
-  "pk": 4,
   "fields": {
     "product": 1,
-    "amount": 74
-  }
-},
-{
-  "model": "auth.user",
-  "pk": 1,
-  "fields": {
-    "password": "pbkdf2_sha256$216000$lJbXhUAu4BKG$W7c3RxGBzBP6Vrqz7nzuyb0QB0LkIoKDG39lSwuxRBU=",
-    "last_login": "2021-04-01T13:56:41.912Z",
-    "is_superuser": true,
-    "username": "admin",
-    "first_name": "",
-    "last_name": "",
-    "email": "admin@admin.admin",
-    "is_staff": true,
-    "is_active": true,
-    "date_joined": "2021-04-01T13:53:02.034Z",
-    "groups": [],
-    "user_permissions": []
+    "amount": 2
   }
 }
 ]

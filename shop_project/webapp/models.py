@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 
 
@@ -23,9 +24,15 @@ class Basket(models.Model):
         return '{}:{}'.format(self.product, self.amount)
 
 
+class OrderProduct(models.Model):
+    product = models.ForeignKey('webapp.Product', verbose_name='продукт', on_delete=models.CASCADE)
+    surplus = models.PositiveIntegerField()
+    order = models.ForeignKey('webapp.Order', verbose_name='продукт', on_delete=models.CASCADE)
+
+
 class Order(models.Model):
-    product = models.ManyToManyField('webapp.Product', related_name='product_order',
-                                     verbose_name='продукт',)
+    product = models.ManyToManyField('webapp.Product', related_name='product_order', verbose_name='продукт',
+                                     through='webapp.OrderProduct', through_fields=('order', 'product'))
     username = models.CharField(max_length=50, blank=False)
     phone_number = models.CharField(max_length=25, blank=False)
     address = models.CharField(max_length=100, blank=False)

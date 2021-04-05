@@ -2,7 +2,7 @@ from django.shortcuts import redirect, reverse
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, DeleteView, UpdateView
 from .models import Product, Basket
-from .forms import ProductForm, BasketForm
+from .forms import ProductForm, BasketForm, OrderForm
 
 # Create your views here.
 
@@ -78,6 +78,19 @@ class BasketListView(ListView):
     context_object_name = 'baskets'
     model = Basket
     paginate_by = 5
+    # form_class = OrderForm
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(object_list=object_list, **kwargs)
+        context['form'] = OrderForm()
+        return context
+
+    def post(self, request, *args, **kwargs):
+        form = OrderForm(data=request.POST)
+        if form.is_valid():
+            print(form.cleaned_data.get('username'))
+            return redirect('basket_list')
+
 
 
 class BasketDeleteView(DeleteView):
@@ -85,3 +98,4 @@ class BasketDeleteView(DeleteView):
     model = Basket
     context_object_name = 'basket'
     success_url = reverse_lazy('basket_list')
+

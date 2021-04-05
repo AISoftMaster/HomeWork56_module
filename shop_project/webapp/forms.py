@@ -1,5 +1,5 @@
 from django import forms
-from webapp.models import Product, Basket
+from webapp.models import Product, Basket, Order
 
 
 class ProductForm(forms.ModelForm):
@@ -12,3 +12,9 @@ class BasketForm(forms.ModelForm):
     class Meta:
         model = Basket
         fields = ('amount',)
+
+
+class OrderForm(forms.ModelForm):
+    class Meta:
+        model = Order
+        fields = ('username', 'phone_number', 'address',)
