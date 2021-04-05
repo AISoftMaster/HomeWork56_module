@@ -22,3 +22,11 @@ class Basket(models.Model):
     def __str__(self):
         return '{}:{}'.format(self.product, self.amount)
 
+
+class Order(models.Model):
+    product = models.ManyToManyField('webapp.Product', related_name='product_order',
+                                     verbose_name='продукт',)
+    username = models.CharField(max_length=50, blank=False)
+    phone_number = models.CharField(max_length=25, blank=False)
+    address = models.CharField(max_length=100, blank=False)
+    date = models.DateField(auto_now_add=True)
