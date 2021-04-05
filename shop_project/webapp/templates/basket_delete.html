@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+Delete basket
+{% endblock title %}
+{% block content %}
+
+    <form method="post">
+    {% csrf_token %}
+    <h1>Are you sure to want to delete</h1>
+    <h2>{{ basket.product.name }} : {{ basket.amount }}</h2>
+        <br>
+    <input type="submit" value="Delete">
+    </form>
+
+{% endblock content %}

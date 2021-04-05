@@ -78,3 +78,10 @@ class BasketListView(ListView):
     context_object_name = 'baskets'
     model = Basket
     paginate_by = 5
+
+
+class BasketDeleteView(DeleteView):
+    template_name = 'basket_delete.html'
+    model = Basket
+    context_object_name = 'basket'
+    success_url = reverse_lazy('basket_list')

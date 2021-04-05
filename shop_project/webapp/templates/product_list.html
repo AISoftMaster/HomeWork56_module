@@ -16,7 +16,8 @@ Products list
     {% endif %}
 
 {% endfor %}
-    {% if is_paginated %}
+    <h2><a href="{% url 'basket_list' %}">Товары в корзине</a>
+    {% if is_paginated %}</h2>
         {% include 'partial/pagination.html' %}
     {% endif %}
     <h3><a href="{% url 'product_create' %}">New_product</a></h3>

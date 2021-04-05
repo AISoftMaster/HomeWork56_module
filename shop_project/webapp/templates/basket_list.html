@@ -6,7 +6,7 @@ Basket List
         <h1>Baskets</h1>
     <ul>
     {% for basket in baskets %}
-        <li>{{ basket.product.name }} : {{ basket.amount }}</li>
+        <li>{{ basket.product.name }} : {{ basket.amount }} <a href="{% url 'basket_delete' basket.pk %}">Delete</a></li>
     {% endfor %}
     </ul>
     {% if is_paginated %}
